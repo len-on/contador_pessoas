@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MaterialApp(
-      title: "Contador de Pessoas",
-      home: Home()));
+  runApp(MaterialApp(title: "Contador de Pessoas", home: Home()));
 }
 
 class Home extends StatefulWidget {
@@ -12,17 +10,16 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-
-  int _people  = 0;
+  int _people = 0;
   String _infoText = "Pode Entrar!";
 
-  void _changePeople(int delta){
+  void _changePeople(int delta) {
     setState(() {
       _people += delta;
 
-      if(_people < 0){
+      if (_people < 0) {
         _infoText = "Mundo Inveertido?!";
-      } else if(_people <= 10){
+      } else if (_people <= 10) {
         _infoText = "Pode Entrar!";
       } else {
         _infoText = "Lotado!";
